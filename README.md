@@ -1,13 +1,13 @@
 # RLC-Circuit
 # A Python code that describes a RLC Circuit (series connection), with the goal to observe and have a better understanding regarding circuit analysis in both DC and AC regimen. However, do notice that in order for it to run, it's necessary to have numpy and matplotlib.
 
-import math
-import numpy as np
-import matplotlib.pyplot as plt
+    import math
+    import numpy as np
+    import matplotlib.pyplot as plt
 
-Fonte = input("Entre com o tipo de fonte: ")
+    Fonte = input("Entre com o tipo de fonte: ")
 
-if Fonte == "DC":
+    if Fonte == "DC":
     dt = 1 * pow(10, -6)
     tf = 0.1
     t = np.arange(0, tf, dt)
@@ -53,6 +53,7 @@ if Fonte == "DC":
     plt.plot(t, Il)
     plt.plot(t, Ic)
     plt.show()
+    
 
 elif Fonte == "AC":
     dt = 50 * 10 ** (-6)
