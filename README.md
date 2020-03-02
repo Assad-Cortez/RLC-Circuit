@@ -71,7 +71,6 @@
         C = C * 10 ** (-6)
         Xc = dt / (2 * C)
         Vl = np.zeros(t.shape[0])
-        Vl2 = np.zeros(t.shape[0])
         Vc = np.zeros(t.shape[0])
         Vr = np.zeros(t.shape[0])
         Il = np.zeros(t.shape[0])
@@ -87,7 +86,6 @@
             b = np.array([[Iin[i] - Ileq[i]], [Ileq[i] - Iceq[i]]])
             x = np.linalg.solve(a, b)
             Vl[i] = x[0] - x[1]
-            Vl2[i] = x[0]
             Vc[i] = x[1]
             Il[i] = Ileq[i] + (Vl[i] / Xl)
             Ic[i] = Iceq[i] + (Vc[i] / Xc)
